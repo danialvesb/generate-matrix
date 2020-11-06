@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gerar matriz</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./resources/assets/styles.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="./resources/main.js" async></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="card-infos">
+            <span class="title">
+                <h4>Matriz números pares</h4>
+            </span>
+            <span class="result">
+                <table>
+                    <tr v-for="(col, indexCol) in generateMatrix(2)" :key="indexCol">
+                        <td v-for="(row, indexRow) in col" :key="indexRow">{{ row }}</td>
+                    </tr>
+                </table>
+            </span>
+        </div>
+        <div class="card-infos">
+            <span class="title">
+                <h4>Matriz números ímpares</h4>
+            </span>
+            <span class="result">
+                <table>
+                    <tr v-for="(col, indexCol) in generateMatrix(1)" :key="indexCol">
+                        <td v-for="(row, indexRow) in col" :key="indexRow">{{ row }}</td>
+                    </tr>
+                </table>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
