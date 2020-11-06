@@ -6,6 +6,7 @@ const vm = new Vue({
             if ((value % 2) == 0 && value != 0) {
                 return value;
             }
+            
             return this.getRandomPair();
         },
         getRandomOdd() {
@@ -13,6 +14,7 @@ const vm = new Vue({
             if ((value % 2) == 1 && value != 0) {
                 return value;
             }
+
             return this.getRandomOdd();
         },
         generateMatrix(typeNumbers) {
@@ -61,6 +63,7 @@ const vm = new Vue({
                     matrix[i][j] = typeNumbers === 2 ? this.getRandomPair() : this.getRandomOdd();
                 }
             }
+
             return matrix;
         },
     },
